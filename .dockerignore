@@ -1,0 +1,19 @@
+# Ignoré au moment du `docker build` (réduit le contexte envoyé au daemon).
+.git
+.gitignore
+.gitattributes
+.dockerignore
+Dockerfile
+Makefile
+README.md
+.DS_Store
+*.swp
+*~
+*.bak
+*.tar
+*.tar.gz
+node_modules/
+__pycache__/
+.cache/
+.vscode/
+.idea/
