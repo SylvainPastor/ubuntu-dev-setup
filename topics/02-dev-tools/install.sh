@@ -9,6 +9,7 @@ apt_install \
     git \
     git-lfs \
     git-extras \
+    gitk \
     tig \
     tmux \
     xclip \
