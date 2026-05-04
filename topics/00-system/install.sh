@@ -44,7 +44,7 @@ apt_install \
 # To enable it manually:
 #   sudo ufw default deny incoming
 #   sudo ufw default allow outgoing
-#   sudo ufw allow ssh                  # if you want incoming SSH
+#   sudo ufw allow ssh
 #   sudo ufw enable
 
 # On Ubuntu, fdfind/batcat have non-standard names: create symlinks.
