@@ -5,18 +5,6 @@ set -euo pipefail
 # shellcheck source=SCRIPTDIR/../../lib/utils.sh
 source "$(dirname "${BASH_SOURCE[0]}")/../../lib/utils.sh"
 
-# Recent git via the official PPA — best effort.
-# Launchpad regularly returns 504/timeouts. If it fails after retry,
-# we fall back to the git shipped by Ubuntu 24.04 (2.43+, already recent).
-if ! grep -rq "git-core/ppa" /etc/apt/sources.list.d/ 2>/dev/null; then
-    log_info "Adding git-core PPA"
-    if retry sudo add-apt-repository -y ppa:git-core/ppa; then
-        sudo apt-get update -qq
-    else
-        log_warn "git-core PPA unavailable (Launchpad?) — using Ubuntu's git."
-    fi
-fi
-
 apt_install \
     git \
     git-lfs \
